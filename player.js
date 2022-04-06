@@ -28,6 +28,18 @@ class Player {
 
     return this.name;
   }
+
+  // function to enter a gesture for the game
+  chooseGesture() {
+    // displaying the gestures
+    console.log("Please enter a gesture: ");
+    let gestureInput = input();
+
+    // set the input equal to gesture
+    this.gesture = gestureInput;
+
+    return this.gesture;
+  }
 }
 
 // test the class name attribute
@@ -37,10 +49,16 @@ let testPlayer = new Player("Neil");
 // console.log(testPlayer.name);
 
 // testing the displayName method of player
-testPlayer.displayName();
+// testPlayer.displayName();
 
 // testing the setName method
-testPlayer.setName();
+// testPlayer.setName();
 
 // displaying the name
 testPlayer.displayName();
+
+// test the chooseGesture method
+// testPlayer.chooseGesture();
+
+//displaying the gesture
+testPlayer.gesture;
