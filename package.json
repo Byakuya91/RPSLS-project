@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Byakuya91/RPSLS-project/issues"
   },
-  "homepage": "https://github.com/Byakuya91/RPSLS-project#readme"
+  "homepage": "https://github.com/Byakuya91/RPSLS-project#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
