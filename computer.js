@@ -36,4 +36,3 @@ class Computer extends Player {
 }
 
 module.exports = Computer;
-// create a computer class
