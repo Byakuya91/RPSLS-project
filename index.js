@@ -1,5 +1,6 @@
 const Computer = require("./computer");
-const { Game } = require("./game");
+
+const Game = require("./game");
 
 const Human = require("./human");
 
@@ -38,4 +39,9 @@ let testGame = new Game();
 
 // testing the Determine Number of Players(SUCESS maybe?)
 
+// testGame.determineNumberOfPlayers();
+
+// testing the run Rounds method
+
 testGame.determineNumberOfPlayers();
+testGame.runRounds();

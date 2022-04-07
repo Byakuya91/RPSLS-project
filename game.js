@@ -47,30 +47,56 @@ class Game {
 
     if (parseInt(numberOfPlayers) === 2) {
       // create two human players
-      this.playerOne = this.Human;
-      this.playerTwo = this.Human;
+      this.playerOne = new Human(); // Human object
+      this.playerTwo = new Human();
     } else {
       // creates one human player and one Computer player.
-      this.playerOne = this.Human;
-      this.playerTwo = this.Computer;
+      this.playerOne = new Human();
+      this.playerTwo = new Computer(); // Computer object
     }
 
     // ask for the players names
 
-    if (this.playerOne == this.Human) {
-      this.playerOne = this.Human.setName();
-    }
+    //     if (this.playerOne == this.Human) {
+    //       this.playerOne = this.
+    //   }
   }
-  // the game's rounds will commence
+  // the game's rounds will commence and players will choose gestures.
   runRounds() {
     console.log("Commence with the round");
 
-    //
+    // we need both player's Input
+    this.playerOne.chooseGesture();
+    this.playerTwo.chooseGesture();
+
+    console.log(this.playerOne.roundChoice);
+
+    this.compareGestures();
+
+    // Rules for victory
+    // equal choices result in a draw!
+    // Paper beats Rock
+    // Rock beats Scissors
+    // Scissors beats Paper
+    // Rock beats Lizard
+    // Lizard beats Spock
   }
+
+  compareGestures() {}
+
+  checkGameWinner() {}
+
+  displayWinner() {}
+
+  askToRestart() {}
+
+  runGame() {}
 }
 
 // export the game class
 
-module.exports = {
-  Game: Game,
-};
+// module.exports = {
+//   Game: Game
+// };
+
+module.exports = Game;

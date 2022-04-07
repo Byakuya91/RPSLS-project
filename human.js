@@ -6,6 +6,7 @@ let { Player } = require("./player");
 class Human extends Player {
   constructor() {
     super();
+    this.setName();
   }
 }
 
