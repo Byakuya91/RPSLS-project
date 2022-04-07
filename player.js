@@ -9,7 +9,7 @@ class Player {
     this.name = name;
     this.score = 0;
     this.roundChoice = "";
-    this.gesture = "";
+    this.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
   }
   // function displays the player's name.
   displayName() {
@@ -36,15 +36,13 @@ class Player {
     let gestureInput = input();
 
     // set the input equal to gesture
-    this.gesture = gestureInput;
-
-    return this.gesture;
+    this.roundChoice = gestureInput;
   }
 }
 
 // test the class name attribute
 
-let testPlayer = new Player("Neil");
+let testPlayer = new Player();
 
 // console.log(testPlayer.name);
 
@@ -55,10 +53,10 @@ let testPlayer = new Player("Neil");
 // testPlayer.setName();
 
 // displaying the name
-testPlayer.displayName();
+// testPlayer.displayName();
 
 // test the chooseGesture method
 // testPlayer.chooseGesture();
 
 //displaying the gesture
-testPlayer.gesture;
+console.log(testPlayer.gestures.length);
