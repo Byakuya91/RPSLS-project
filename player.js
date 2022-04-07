@@ -60,3 +60,9 @@ let testPlayer = new Player();
 
 //displaying the gesture
 console.log(testPlayer.gestures.length);
+
+// exporting the Player class
+
+module.exports = {
+  Player: Player,
+};
