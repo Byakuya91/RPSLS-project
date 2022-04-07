@@ -4,7 +4,11 @@ const Computer = require("./computer");
 
 const Human = require("./human");
 
-const Player = require("./player");
+// const Player = require("./player");
+
+// create an input with prompt-sync
+
+const input = require("prompt-sync")();
 
 // create the Game class
 
@@ -30,6 +34,34 @@ class Game {
   }
   // determines who is playing(Human or computer and takes in their names)
   determineNumberOfPlayers() {
-    pass;
+    // we need to ask how many people are playing.
+    // if we have two players, we create two Human players.
+    //  else we create a Computer player.
+    // we ask the human player what their name is and display it.
+
+    // taking in how many players will be partaking in the game. Note this is a String input!
+    console.log("Please enter how many players are going to play: ");
+    let numberOfPlayers = input();
+
+    // checking to see if two was entered.
+
+    if (parseInt(numberOfPlayers) === 2) {
+      // create two human players
+      this.playerOne = this.Human;
+      this.playerTwo = this.Human;
+    } else {
+      this.playerOne = this.Human;
+      this.playerTwo = this.Computer;
+    }
+
+    // if both players are human
+
+    // if (this.playerOne.Human === this.playerTwo)
   }
 }
+
+// export the game class
+
+module.exports = {
+  Game: Game,
+};

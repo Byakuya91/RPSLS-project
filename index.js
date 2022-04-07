@@ -1,4 +1,5 @@
 const Computer = require("./computer");
+const { Game } = require("./game");
 
 const Human = require("./human");
 
@@ -15,12 +16,26 @@ const Human = require("./human");
 
 // testing the Human class
 
-let TestHuman = new Human();
+// let TestHuman = new Human();
 
-// testing a gesture
+// // testing a gesture
 
-TestHuman.chooseGesture();
+// TestHuman.chooseGesture();
 
-// display the gesture
+// // display the gesture
 
-console.log(TestHuman.roundChoice);
+// console.log(TestHuman.roundChoice);
+
+// testing the Game class
+let testGame = new Game();
+
+// testing the Welcome (SUCESSS)
+// testGame.displayWelcome();
+
+// testing the displayrules (SUCESS)
+
+// testGame.displayRules();
+
+// testing the Determine Number of Players(SUCESS maybe?)
+
+testGame.determineNumberOfPlayers();
