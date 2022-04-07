@@ -50,13 +50,22 @@ class Game {
       this.playerOne = this.Human;
       this.playerTwo = this.Human;
     } else {
+      // creates one human player and one Computer player.
       this.playerOne = this.Human;
       this.playerTwo = this.Computer;
     }
 
-    // if both players are human
+    // ask for the players names
 
-    // if (this.playerOne.Human === this.playerTwo)
+    if (this.playerOne == this.Human) {
+      this.playerOne = this.Human.setName();
+    }
+  }
+  // the game's rounds will commence
+  runRounds() {
+    console.log("Commence with the round");
+
+    //
   }
 }
 
