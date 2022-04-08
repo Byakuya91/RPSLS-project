@@ -46,4 +46,5 @@ let testGame = new Game();
 testGame.determineNumberOfPlayers();
 testGame.runRounds();
 testGame.compareGestures();
-testGame.checkGameWinner();
+testGame.displayCurrentScore();
+// testGame.checkGameWinner();
