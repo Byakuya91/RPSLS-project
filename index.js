@@ -43,8 +43,14 @@ let testGame = new Game();
 
 // testing game functionn
 
-testGame.determineNumberOfPlayers();
-testGame.runRounds();
-testGame.compareGestures();
-testGame.displayCurrentScore();
+// testGame.displayWelcome();
+// testGame.displayrules();
+// testGame.determineNumberOfPlayers();
+// testGame.gestureSelection();
+// testGame.compareGestures();
+// testGame.displayCurrentScore();
 // testGame.checkGameWinner();
+
+// testing the game method
+
+testGame.runGame();

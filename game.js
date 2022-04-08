@@ -21,6 +21,24 @@ class Game {
     this.playerTwo = null;
   }
 
+  // running the entire game method
+
+  runGame() {
+    // running the entire game from start to finish, including a reset.
+
+    // setting up the game.
+    this.displayWelcome();
+    this.displayRules();
+    this.determineNumberOfPlayers();
+    // game starts
+    while ((this.playerOne.score < 3) & (this.playerTwo.score < 3)) {
+      this.gestureSelection();
+      this.compareGestures();
+      this.displayCurrentScore();
+      this.checkGameWinner();
+    }
+  }
+
   // method to greet the Players
   displayWelcome() {
     console.log("Welcome to RPSLS!\n We hope you enjoy yourselves. ");
@@ -62,8 +80,8 @@ class Game {
     //   }
   }
   // the game's rounds will commence and players will choose gestures.
-  runRounds() {
-    console.log("Commence with the round");
+  gestureSelection() {
+    console.log("Commence with the round choice");
 
     // we need both player's Input
     console.log("Player one:\n");
@@ -91,6 +109,18 @@ class Game {
     if (this.playerOne.roundChoice === this.playerTwo.roundChoice) {
       console.log("Draw! Please enter new gestures!");
     }
+
+    // Checking for invalid input
+    // if (
+    //   this.playerOne.roundChoice != "Rock" ||
+    //   this.playerOne.roundChoice != "Paper" ||
+    //   this.playerOne.roundChoice != "Scissors" ||
+    //   this.playerOne.roundChoice != "Lizard" ||
+    //   this.playerOne.roundChoice != "Spock"
+    // ) {
+    //   console.log("invalid input.Please enter again!");
+    //   this.runRounds();
+    // }
 
     // STEP ONE: original RPS checks
 
@@ -305,12 +335,12 @@ class Game {
     // whoever doesn't looses
 
     //checking if PlayerOne or PlayerTwo won with games out of three.
-    if (this.playerOne.score <= 3) {
+    if (this.playerOne.score == 2) {
       console.log("GAME OVER!");
       console.log(
         `${this.playerOne.name} is the winner with: ${this.playerOne.score} points.`
       );
-    } else if (this.playerTwo.score <= 3) {
+    } else if (this.playerTwo.score == 2) {
       console.log("GAME OVER!");
       console.log(
         `${this.playerTwo.name} is the winner with: ${this.playerTwo.score} points.`
@@ -326,7 +356,17 @@ class Game {
     console.log(`${this.playerTwo.name} is currently: ${this.playerTwo.score}`);
   }
 
-  runGame() {}
+  resetGame() {
+    // a function designed to reset the game.
+    console.log(" Do you wish to replay the game(y/n");
+
+    resetInput = input();
+
+    if (resetInput === "y") {
+      console.log("Game resetting...");
+      this.runGame();
+    }
+  }
 }
 
 // export the game class

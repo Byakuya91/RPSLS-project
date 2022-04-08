@@ -59,7 +59,7 @@ let testPlayer = new Player();
 // testPlayer.chooseGesture();
 
 //displaying the gesture
-console.log(testPlayer.gestures.length);
+console.log(testPlayer.gestures);
 
 // exporting the Player class
 
