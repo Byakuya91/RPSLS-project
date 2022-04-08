@@ -223,12 +223,31 @@ class Game {
     }
 
     // Check if both Player's inputs are valid(To due)
+    console.log(this.playerOne.score);
+    console.log(this.playerTwo.score);
   }
 
   // check to see who won the entire game.
-  checkGameWinner() {}
-  //  display that win of whoever won the game.
-  displayWinner() {}
+  checkGameWinner() {
+    //  display that win of whoever won the game.
+    // compare the scores of Players. Whoever has a score of greater than or equal to two wins!
+    // whoever doesn't looses
+
+    //checking if PlayerOne or PlayerTwo won with games out of three.
+    if (this.playerOne.score <= 3) {
+      console.log("GAME OVER!");
+      console.log(
+        `${this.playerOne.name} is the winner with: ${this.playerOne.score} points.`
+      );
+    } else if (this.playerTwo.score <= 3) {
+      console.log("GAME OVER!");
+      console.log(
+        `${this.playerTwo.name} is the winner with: ${this.playerTwo.score} points.`
+      );
+    }
+  }
+
+  // displayWinner() {}
 
   askToRestart() {}
 
