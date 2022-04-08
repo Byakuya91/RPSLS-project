@@ -31,11 +31,16 @@ class Game {
     this.displayRules();
     this.determineNumberOfPlayers();
     // game starts
-    while ((this.playerOne.score < 3) & (this.playerTwo.score < 3)) {
+    while ((this.playerOne.score < 2) & (this.playerTwo.score < 2)) {
+      this.gestureSelection(); // ask for gestures
+      this.compareGestures(); // compare the gestures
+      this.displayCurrentScore(); // display the current score
+      this.checkGameWinner(); // check for a winner, if not, loop back.
       this.gestureSelection();
       this.compareGestures();
       this.displayCurrentScore();
       this.checkGameWinner();
+      // this.resetGame(); // check to see if the individual wishes to reset the game.
     }
   }
 
@@ -119,7 +124,18 @@ class Game {
     //   this.playerOne.roundChoice != "Spock"
     // ) {
     //   console.log("invalid input.Please enter again!");
-    //   this.runRounds();
+    //   this.gestureSelection();
+    // }
+
+    // if (
+    //   this.playerTwo.roundChoice != "Rock" ||
+    //   this.playerTwo.roundChoice != "Paper" ||
+    //   this.playerTwo.roundChoice != "Scissors" ||
+    //   this.playerTwo.roundChoice != "Lizard" ||
+    //   this.playerTwo.roundChoice != "Spock"
+    // ) {
+    //   console.log("invalid input.Please enter again!");
+    //   this.gestureSelection();
     // }
 
     // STEP ONE: original RPS checks
@@ -360,11 +376,14 @@ class Game {
     // a function designed to reset the game.
     console.log(" Do you wish to replay the game(y/n");
 
-    resetInput = input();
+    let resetInput = input();
 
     if (resetInput === "y") {
       console.log("Game resetting...");
       this.runGame();
+    } else {
+      console.log("Thank you for playing, bye!");
+      this.PlayerOne.score = 3;
     }
   }
 }
