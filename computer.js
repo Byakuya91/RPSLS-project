@@ -19,6 +19,7 @@ class Computer extends Player {
   // create constructor and inherit from Player class
   constructor() {
     super();
+    this.name = "Computer";
   }
 
   chooseGesture() {

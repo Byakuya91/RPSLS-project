@@ -75,7 +75,7 @@ class Game {
     // console.log(this.playerTwo.roundChoice);
 
     // running the checks for whoever wins,looses and ties!
-    this.compareGestures();
+    // this.compareGestures();
   }
 
   compareGestures() {
