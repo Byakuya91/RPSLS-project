@@ -72,7 +72,7 @@ class Game {
     console.log(this.playerOne.roundChoice);
     console.log(this.playerTwo.roundChoice);
 
-    // running the checks for victory, defeat and tie!
+    // running the checks for whoever wins,looses and ties!
     this.compareGestures();
   }
 
@@ -225,8 +225,9 @@ class Game {
     // Check if both Player's inputs are valid(To due)
   }
 
+  // check to see who won the entire game.
   checkGameWinner() {}
-
+  //  display that win of whoever won the game.
   displayWinner() {}
 
   askToRestart() {}
