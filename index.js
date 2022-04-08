@@ -41,7 +41,7 @@ let testGame = new Game();
 
 // testGame.determineNumberOfPlayers();
 
-// testing the run Rounds method
+// testing game functionn
 
 testGame.determineNumberOfPlayers();
 testGame.runRounds();

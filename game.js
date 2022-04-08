@@ -70,9 +70,13 @@ class Game {
     this.playerTwo.chooseGesture();
 
     console.log(this.playerOne.roundChoice);
+    console.log(this.playerTwo.roundChoice);
 
+    // running the checks for victory, defeat and tie!
     this.compareGestures();
+  }
 
+  compareGestures() {
     // Rules for victory
     // equal choices result in a draw!
     // Paper beats Rock
@@ -80,9 +84,146 @@ class Game {
     // Scissors beats Paper
     // Rock beats Lizard
     // Lizard beats Spock
-  }
 
-  compareGestures() {}
+    // check if PlayerOne and PlayerTwo's input are the same
+    if (this.playerOne.roundChoice === this.playerTwo.roundChoice) {
+      console.log("Draw! Please enter new gestures!");
+      // Traditional RPS checks
+      //1) Rock and Paper checks
+    } else if (
+      (this.playerOne.roundChoice === "Rock") &
+      (this.playerTwo.roundChoice === "Paper")
+    ) {
+      console.log("Paper Beats Rock! Player Two wins the round!");
+      this.playerTwo.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Paper") &
+      (this.playerTwo.roundChoice === "Rock")
+    ) {
+      console.log("Paper Beats Rock! Player One wins the round!");
+      this.playerOne.score += 1;
+      // 2)Scissors and Paper checks
+    } else if (
+      (this.playerOne.roundChoice === "Scissors") &
+      (this.playerTwo.roundChoice === "Paper")
+    ) {
+      console.log("Scissors Beats Paper! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Paper") &
+      (this.playerTwo.roundChoice === "Scissors")
+    ) {
+      console.log("Scissors Beats Paper! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      //3) Rock and Scissor checks
+    } else if (
+      (this.playerOne.roundChoice === "Rock") &
+      (this.playerTwo.roundChoice === "Scissors")
+    ) {
+      console.log("Rock Beats Scissors! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Scissors") &
+      (this.playerTwo.roundChoice === "Rock")
+    ) {
+      console.log("Rock Beats Scissors! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      // Spock, lizard implemented
+      // 1) Rock and Lizard checks
+    } else if (
+      (this.playerOne.roundChoice === "Rock") &
+      (this.playerTwo.roundChoice === "Lizard")
+    ) {
+      console.log("Rock crushes Lizard! PLayer One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Lizard") &
+      (this.playerTwo.roundChoice === "Rock")
+    ) {
+      console.log("Rock crushes Lizard! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      // Lizard and Spock checks
+    } else if (
+      (this.playerOne.roundChoice === "Lizard") &
+      (this.playerTwo.roundChoice === "Spock")
+    ) {
+      console.log("Lizard poisons Spock! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Spock") &
+      (this.playerTwo.roundChoice === "Lizard")
+    ) {
+      console.log("Lizard poisons Spock! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      // Scissors and Spock check
+    } else if (
+      (this.playerOne.roundChoice === "Spock") &
+      (this.playerTwo.roundChoice === "Scissors")
+    ) {
+      console.log("Spock smashes Scissors! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Scissors") &
+      (this.playerTwo.roundChoice === "Spock")
+    ) {
+      console.log("Spock smashes Scissors! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      // Scissors decapitate Lizards check
+    } else if (
+      (this.playerOne.roundChoice === "Scissors") &
+      (this.playerTwo.roundChoice === "Lizard")
+    ) {
+      console.log("Scissors decapitates Lizard! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Lizard") &
+      (this.playerTwo.roundChoice === "Scissors")
+    ) {
+      console.log("Scissors decapitates Lizard! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      // Lizard eats Paper checks
+    } else if (
+      (this.playerOne.roundChoice === "Lizard") &
+      (this.playerTwo.roundChoice === "Paper")
+    ) {
+      console.log("Lizard eats Paper! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Paper") &
+      (this.playerTwo.roundChoice === "Lizard")
+    ) {
+      console.log("Lizard eats Paper! Player Two wins the round!");
+      this.playerTwo.score += 1;
+      // Paper disapproves of Spock checks
+    } else if (
+      (this.playerOne.roundChoice === "Paper") &
+      (this.playerTwo.roundChoice === "Spock")
+    ) {
+      console.log("Paper disapproves of Spock! Player Two wins the round!");
+      this.playerTwo.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Spock") &
+      (this.playerTwo.roundChoice === "Paper")
+    ) {
+      console.log("Paper disapproves of Spock! Player One wins the round!");
+      this.playerOne.score += 1;
+      // Spock vaporizes Rock checks
+    } else if (
+      (this.playerOne.roundChoice === "Spock") &
+      (this.playerTwo.roundChoice === "Rock")
+    ) {
+      console.log("Spock vaporizes Rock! Player One wins the round!");
+      this.playerOne.score += 1;
+    } else if (
+      (this.playerOne.roundChoice === "Rock") &
+      (this.playerTwo.roundChoice === "Spock")
+    ) {
+      console.log("Spock vaporizes Rock! Player Two wins the round!");
+      this.playerOne.score += 1;
+    }
+
+    // Check if both Player's inputs are valid(To due)
+  }
 
   checkGameWinner() {}
 
