@@ -66,11 +66,13 @@ class Game {
     console.log("Commence with the round");
 
     // we need both player's Input
+    console.log("Player one:\n");
     this.playerOne.chooseGesture();
+    console.log("Player Two:\n");
     this.playerTwo.chooseGesture();
 
-    console.log(this.playerOne.roundChoice);
-    console.log(this.playerTwo.roundChoice);
+    // console.log(this.playerOne.roundChoice);
+    // console.log(this.playerTwo.roundChoice);
 
     // running the checks for whoever wins,looses and ties!
     this.compareGestures();
@@ -234,12 +236,26 @@ class Game {
     // whoever doesn't looses
 
     //checking if PlayerOne or PlayerTwo won with games out of three.
-    if (this.playerOne.score <= 3) {
+    // if (this.playerOne.score <= 3) {
+    //   console.log("GAME OVER!");
+    //   console.log(
+    //     `${this.playerOne.name} is the winner with: ${this.playerOne.score} points.`
+    //   );
+    // } else if (this.playerTwo.score <= 3) {
+    //   console.log("GAME OVER!");
+    //   console.log(
+    //     `${this.playerTwo.name} is the winner with: ${this.playerTwo.score} points.`
+    //   );
+    // }
+
+    // trying a new approach, comparing Player's scores instead of number.
+
+    if (this.playerOne.score > this.playerTwo.score) {
       console.log("GAME OVER!");
       console.log(
         `${this.playerOne.name} is the winner with: ${this.playerOne.score} points.`
       );
-    } else if (this.playerTwo.score <= 3) {
+    } else {
       console.log("GAME OVER!");
       console.log(
         `${this.playerTwo.name} is the winner with: ${this.playerTwo.score} points.`
@@ -247,7 +263,7 @@ class Game {
     }
   }
 
-  // displayWinner() {}
+  // displayCurrentScore() {}
 
   askToRestart() {}
 
